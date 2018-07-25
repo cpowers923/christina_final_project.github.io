@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sacramento');
+
+* {
+	margin: 0 auto;
+	box-sizing: border-box;	
+}
+
+html,body{
+    width:100%;
+    overflow-x:hidden;
+  }
+
+body {
+	font-family: 'Open Sans Condensed';
+	font-size: 1em;
+
+
+}
+
+#name {
+	position: absolute;
+	margin-top: -39em;
+	text-align: center;
+	left: 65%;
+	margin-left: -40em;
+}
+
+
+h1 {
+	font-family: 'Sacramento';
+	font-size: 7em;
+	text-transform: 
+	text-align: center;
+	color: white;
+	text-shadow: .08em .08em .6em #000000;
+}
+
+
+h3 {
+	font-family: 'Open Sans Condensed';
+	font-size: 1.5em;
+	font-weight: 600;
+	text-transform: uppercase;
+
+}
+
+.reslink {
+	margin-top: 6em;
+	font-family: 'Open Sans Condensed';
+	font-size: 2em;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: white;
+	text-shadow: .08em .08em .6em #000000;
+	
+}
+
+h2 {
+	font-family: 'Open Sans Condensed';
+	font-size: 4.5em;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-align: center;
+	color: #8ba28b;
+	margin-top: 1em;
+
+}
+
+
+
+p {
+	font-family: 'Open Sans Condensed';
+	font-size: 1.5em;
+}
+
+.hero {
+	width: 100%;
+	margin: 0 auto;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	position: relative;
+}
+
+.bar2 {
+	width: 100%;
+	opacity: 0.9;
+}
+
+section {
+	padding: 4em;
+}
+
+#reservations {
+	margin-top: 9em;
+	text-align: center;
+	padding-bottom: 8em;
+}
+
+#make {
+	padding: 0;
+    margin: 0;
+    float: left;
+    width: 48%;
+}
+
+input[type=text] {
+    width: 50%;
+    padding: .5em;
+    box-sizing: content-box;
+    margin: .5em;
+    font-family: 'Open Sans Condensed';
+	font-size: 1em;
+    
+}
+
+button{
+	width: 50%;
+    padding: .5em;
+    margin: 1em;
+    background: #e7e7e7;
+    border: none;
+    font-family: 'Open Sans Condensed';
+	font-size: 1em;
+}
+
+button:hover {
+	background: #e7e7e7;
+    border: 2px solid #555555;
+    font-family: 'Open Sans Condensed';
+	font-size: 1em;
+}
+
+
+#existing {
+    padding: 0 .5em 1em 0em;
+    float: right;   
+    width: 48%;
+
+}
+
+#dine {
+	margin-top: 10em;
+	text-align: center;
+}
+
+#dine h3 {
+	padding-bottom: 2em;
+}
+
+#map {
+	width: 100%;
+	position: relative;
+
+}
+
+.clearfix:map {
+	visibility: hidden;
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
+	font-size: 0;
+}
+
+#reviews {
+	text-align: center;
+	position: absolute;
+	width: 100%;
+}
+
+#reviews img {
+	width: 100%;
+
+}
+
+#reviews p {
+	font-size: 1.2em;
+	text-align: justify;
+	font-style: italic;
+}
+
+#left {
+	float: left;
+	padding-top: 2em;
+}
+
+#right {
+	padding-top: 2em;
+	padding-right: 6em;
+	text-align: justify;
+	float: right;
+}
+
+
