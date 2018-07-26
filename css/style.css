@@ -51,18 +51,17 @@ h3 {
 	font-weight: 600;
 	text-transform: uppercase;
 	color: white;
-	text-shadow: .08em .08em .6em #000000;
 	
 }
 
 h2 {
 	font-family: 'Open Sans Condensed';
-	font-size: 4.5em;
+	font-size: 4em;
 	font-weight: 600;
 	text-transform: uppercase;
 	text-align: center;
 	color: #8ba28b;
-	margin-top: 1em;
+	margin-top: 1.2em;
 
 }
 
