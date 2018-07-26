@@ -38,27 +38,27 @@
 <main>
 
 
-<section id="reservations" class="clearfix">
+<section id="reservation-info" class="clearfix">
 
-	<aside id="make">
+	<aside id="form">
 		<h3>Make a Reservation</h3>
 		<br>
 		<form>
-			<input type="text" placeholder="Enter your name.">
+			<input id="reservation-name" type="text" placeholder="Enter your name.">
 			<br>
-			<input type="text" placeholder="Enter a date.">
+			<input id="reservation-day" type="text" placeholder="Enter a day.">
 			<br>
 			<button>confirm reservation</button>
 		</form>
 	</aside>
 
-	<aside id="existing">
+	<aside id="reservations">
 		<h3>Existing Reservations</h3>
 		<br>
 		<table>
 			<thead>
-				<th>Name</th>
-				<th>Date</th>
+				<th id="name">Name</th>
+				<th id="day">Day</th>
 			</thead>
 			<tbody> [ form data will publish here ] </tbody>
 		</table>
@@ -99,8 +99,12 @@
      
       <!-- custom js -->
       <script src="js/main.js"></script>
+      
       <!-- google maps -->
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYz4UGcyLZ28EMwy8Tt8p3aubQmkz06v8" async defer></script>
+	  
+	  <!-- firebase -->
+      <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
 
 	
 	</body>

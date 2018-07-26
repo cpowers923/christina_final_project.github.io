@@ -90,13 +90,13 @@ section {
 	padding: 4em;
 }
 
-#reservations {
+#reservation-info {
 	margin-top: 9em;
 	text-align: center;
 	padding-bottom: 8em;
 }
 
-#make {
+#form {
 	padding: 0;
     margin: 0;
     float: left;
@@ -131,7 +131,7 @@ button:hover {
 }
 
 
-#existing {
+#reservations {
     padding: 0 .5em 1em 0em;
     float: right;   
     width: 48%;
