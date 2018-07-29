@@ -53,17 +53,23 @@
 		</form>
 	</aside>
 
-	<aside id="reservations">
+	<aside id="reservations" type="text/x-handlebars-template">
 		<h3>Existing Reservations</h3>
 		<br>
 		<table>
 			<thead>
-				<th>Name</th>
-				<th>Day</th>
+				<th>{{Name}} - {{Day}}</th>
 			</thead>
 			<tbody class="existing"> [ form data will publish here ] </tbody>
 		</table>
 	</aside>
+
+</section>
+
+<section id="hours">
+	<h3>Hours</h3>
+	<br>
+	<p>Monday - Thursday: 8am - 10pm, Friday - Saturday: 8am - 12am, Sunday: 9am - 8pm</p>
 
 </section>
 

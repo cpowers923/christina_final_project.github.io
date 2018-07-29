@@ -140,6 +140,19 @@ button:hover {
 
 }
 
+#hours {
+	margin-top: 8em;
+	padding-top: 5em;
+	text-align: center;
+}
+
+#hours p {
+	text-align: center;
+	font-family: 'Open Sans Condensed';
+	font-size: 1.2em;
+
+}
+
 #dine {
 	margin-top: 10em;
 	text-align: center;
@@ -171,18 +184,6 @@ button:hover {
 	background-size: cover;
 	padding: 0;
 
-}
-
-#left {
-	float: left;
-	padding-top: 2em;
-}
-
-#right {
-	padding-top: 2em;
-	padding-right: 6em;
-	text-align: justify;
-	float: right;
 }
 
 
