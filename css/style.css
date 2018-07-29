@@ -93,6 +93,7 @@ section {
 #reservation-info {
 	margin-top: 9em;
 	text-align: center;
+	padding-top: 8em;
 	padding-bottom: 8em;
 }
 
@@ -113,8 +114,9 @@ input[type=text] {
     
 }
 
+
 button{
-	width: 50%;
+	width: 38%;
     padding: .5em;
     margin: 1em;
     background: #e7e7e7;
@@ -141,6 +143,7 @@ button:hover {
 #dine {
 	margin-top: 10em;
 	text-align: center;
+	padding-bottom: 8em;
 }
 
 #dine h3 {
@@ -162,21 +165,12 @@ button:hover {
 	font-size: 0;
 }
 
-#reviews {
-	text-align: center;
-	position: absolute;
+#photo {
 	width: 100%;
-}
+	opacity: 0.9;
+	background-size: cover;
+	padding: 0;
 
-#reviews img {
-	width: 100%;
-
-}
-
-#reviews p {
-	font-size: 1.2em;
-	text-align: justify;
-	font-style: italic;
 }
 
 #left {

@@ -17,14 +17,16 @@
 
       var allReservations = results.val();
 
+      var reservations = []; {
+
       var context = {
         name: allReservations[item].name,
         day: allReservations[item].day
 
       };
 
-    });
-  }
+    };
+  });
 
   var database = firebase.database();
 
@@ -33,7 +35,20 @@
     e.preventDefault();
   
 
-  var userInput = $('#reservation-name', '#reservation-day').val();
+  var userInput = {
+  name: $('#reservation-name').val(),
+  day: $('#reservation-day').val()
+  
+  };
+
+  var source = $('#reservations').html();
+
+  var template = Handlebars.compile(source);
+
+  var existingReservationHTML = template(userInput);
+
+  $('tbody').append(existingReservationHTML);
+});
 
   $('#reservation-name', '#reservation-day').val('')
 
@@ -44,8 +59,7 @@
     day: userInput
     
   });
-
-});
+};
 
 
 
@@ -72,7 +86,7 @@ function initMap() {
   });
 });
 }
-  
+
 
 initMap();
 

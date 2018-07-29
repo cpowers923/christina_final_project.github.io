@@ -3,6 +3,7 @@
 	<head>
 		<title>The Drinking Goat</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+
 	</head>
 	<body>
 
@@ -23,7 +24,7 @@
 		<br>
 
 		<h3 class="reslink">Reservations</h3>
-		<a href="#reservations">
+		<a href="#reservation-info">
 			<img class="arrow" src="images/arrow.png" alt="arrow"
 			style="width:10%">
 		</a>
@@ -57,8 +58,8 @@
 		<br>
 		<table>
 			<thead>
-				<th id="name">Name</th>
-				<th id="day">Day</th>
+				<th>Name</th>
+				<th>Day</th>
 			</thead>
 			<tbody> [ form data will publish here ] </tbody>
 		</table>
@@ -78,33 +79,27 @@
 
 </section>
 
-<section id="reviews" class="clearfix">
+<div id="photo" class="clearfix">
 
-	<h3>Reviews</h3>
+		<img src="images/bar1.jpg" alt="Jerry">
 
-	<aside id="left">
-		<img src="images/jerry.jpg" alt="Jerry">
-	</aside>
-
-	<aside id="right">
-		<p>"Big lettuce, big carrots, tomatoes like volleyballs."</p>
-		<p>-Jerry Seinfeld, on The BIG salad</p>
-	</aside>
-
-</section>
+</div>
 
 </main>
 
  <!-- jQuery -->
-     
-      <!-- custom js -->
-      <script src="js/main.js"></script>
-      
+
+      <!-- firebase -->
+      	<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+        <script src="js/handlebars-v4.0.5.js"></script>
+  		<script src="js/jquery-3.0.0.min.js"></script>
+ 
       <!-- google maps -->
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYz4UGcyLZ28EMwy8Tt8p3aubQmkz06v8" async defer></script>
+
+      <!-- custom js -->
+      <script src="js/main.js"></script>
 	  
-	  <!-- firebase -->
-      <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
 
 	
 	</body>
