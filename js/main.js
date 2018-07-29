@@ -47,7 +47,9 @@
 
   var existingReservationHTML = template(userInput);
 
-  $('tbody').append(existingReservationHTML);
+  var newListItemHTML = template(userInput);
+
+  $('.existing').append(existingReservationHTML);
 });
 
   $('#reservation-name', '#reservation-day').val('')
