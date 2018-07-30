@@ -11,28 +11,27 @@
   firebase.initializeApp(config);
   
 
-  function getReservations() {
+function getReservations() {
 
     database.ref('reservations').on('value', function (results) {
 
       var allReservations = results.val();
 
-      var reservations = []; {
+      var reservations = [];
 
       var context = {
         name: allReservations[item].name,
         day: allReservations[item].day
 
-      };
 
     };
   });
-
+}
   var database = firebase.database();
 
 
-  $('#form').on('submit', function(e) {
-    e.preventDefault();
+  $('#reservation').submit(function(e) {
+   // e.preventDefault();
   
 
   var userInput = {
@@ -40,6 +39,7 @@
   day: $('#reservation-day').val()
   
   };
+console.log(userInput);
 
   var source = $('#reservations').html();
 
@@ -50,19 +50,18 @@
   var newItemHTML = template(userInput);
 
   $('.existing').append(newItemHTML);
-});
 
-  $('#reservation-name', '#reservation-day').val('')
+  $('#reservation-name', '#reservation-day').val('');
 
   var reservationsReference = database.ref('reservations');
 
-  reservationsReference.push({
-    name: userInput,
-    day: userInput
-    
-  });
-};
 
+  reservationsReference.push({
+    name: userInput.name,
+    day: userInput.day
+    
+});
+});
 
 
 function initMap() {
