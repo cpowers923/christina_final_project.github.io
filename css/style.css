@@ -21,14 +21,14 @@ body {
 	position: absolute;
 	margin-top: -39em;
 	text-align: center;
-	left: 65%;
-	margin-left: -40em;
+	left: 70%;
+	margin-left: -38em;
 }
 
 
 h1 {
 	font-family: 'Sacramento';
-	font-size: 7em;
+	font-size: 6em;
 	text-transform: 
 	text-align: center;
 	color: white;
@@ -61,7 +61,7 @@ h2 {
 	text-transform: uppercase;
 	text-align: center;
 	color: #8ba28b;
-	margin-top: 1.2em;
+	margin-top: 1.5em;
 
 }
 
@@ -115,7 +115,7 @@ input[type=text] {
 }
 
 
-button{
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
 	width: 38%;
     padding: .5em;
     margin: 1em;
@@ -125,11 +125,9 @@ button{
 	font-size: 1em;
 }
 
-button:hover {
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button:hover {
 	background: #e7e7e7;
-    border: 2px solid #555555;
-    font-family: 'Open Sans Condensed';
-	font-size: 1em;
+	border: #555555;
 }
 
 
@@ -139,6 +137,15 @@ button:hover {
     width: 48%;
 
 }
+
+
+li {
+    text-align: center;
+	font-family: 'Open Sans Condensed';
+	font-size: 1.2em;
+	padding: 2em;
+}
+
 
 #hours {
 	margin-top: 8em;

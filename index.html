@@ -44,24 +44,41 @@
 	<aside id="form">
 		<h3>Make a Reservation</h3>
 		<br>
-		<form id="reservation" action="">
-			<input id="reservation-name" type="text" placeholder="Enter your name." value="">
-			<br>
-			<input id="reservation-day" type="text" placeholder="Enter a day." value="">
-			<br>
-			<input type="submit" value="confirm reservation" form="reservation">
-		</form>
+		<!-- reservation form -->
+		<div class="row reservation-form-container">
+			<div class="col-md-12 text-center reservation-form">
+				<form class="form-inline reservations">
+				  <div class="form-group">
+				    <input type="text" class="form-control reservation-name" placeholder="Name">
+				    <input type="text" class="form-control reservation-day" placeholder="Day">
+				  </div>
+				  </div>
+				  <button class="btn btn-default reservation-button">Set Reservation</button>
+				</form>
+			</div>
+		</div>
 	</aside>
 
-	<aside id="reservations" type="text/x-handlebars-template">
+	<aside id="reservations" data-spy="scroll" data-target=".navbar-inverse" data-offset="50">
+		
 		<h3>Existing Reservations</h3>
-		<br>
-		<table>
+
+		<!-- reservations -->
+		<table class="table table-striped col-md-12 container-fluid">
 			<thead>
-				<th>{{Name}} - {{Day}}</th>
+				<th></th>
+				<th></th>
 			</thead>
-			<tbody class="existing"> [ form data will publish here ] </tbody>
+			<tbody class="reservation-list"></tbody>
 		</table>
+
+	<!-- template for reservation-list -->
+	<script id="reservation-template" type="text/x-handlebars-template">
+		<tr>
+			<td>{{name}}, </td>
+			<td>{{day}}</td>
+		</tr>
+	</script>
 	</aside>
 
 </section>

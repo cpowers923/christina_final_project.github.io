@@ -1,4 +1,5 @@
- 
+ var reservationData = {}
+
   var config = {
     apiKey: "AIzaSyB2eNwWfMqenKvTdLnBsDKpEEpA_IRTUCM",
     authDomain: "reservation-site-d8059.firebaseapp.com",
@@ -8,59 +9,44 @@
     messagingSenderId: "652457995835"
   };
 
-  firebase.initializeApp(config);
-  
+firebase.initializeApp(config);
 
-function getReservations() {
+var database = firebase.database();
 
-    database.ref('reservations').on('value', function (results) {
+// set the day when an option is clicked on
+//  reservationData.day = $(this).text();
+//});
 
-      var allReservations = results.val();
+// when clicked, the name data should be set
+// and all data should be sent to your database
+$('.reservations').on('submit', function(event) {
+  // prevent reloading
+  event.preventDefault();
 
-      var reservations = [];
+  // get name from input
+  reservationData.name = $('.reservation-name').val();
+  reservationData.day = $('.reservation-day').val();
 
-      var context = {
-        name: allReservations[item].name,
-        day: allReservations[item].day
-
-
-    };
-  });
-}
-  var database = firebase.database();
-
-
-  $('#reservation').submit(function(e) {
-   // e.preventDefault();
-  
-
-  var userInput = {
-  name: $('#reservation-name').val(),
-  day: $('#reservation-day').val()
-  
-  };
-console.log(userInput);
-
-  var source = $('#reservations').html();
-
-  var template = Handlebars.compile(source);
-
-  var existingReservationHTML = template(userInput);
-
-  var newItemHTML = template(userInput);
-
-  $('.existing').append(newItemHTML);
-
-  $('#reservation-name', '#reservation-day').val('');
-
-  var reservationsReference = database.ref('reservations');
-
-
-  reservationsReference.push({
-    name: userInput.name,
-    day: userInput.day
-    
+  // push configured data object to database
+  database.ref('reservations').push(reservationData);
 });
+
+
+// on initial load and addition of each reservation update the view
+database.ref('reservations').on('child_added', function(snapshot) {
+  // grab element to hook to
+  var reservationList = $('.reservation-list');
+  // get data from database
+  var reservations = snapshot.val();
+  // get your template from your script tag
+  var source = $("#reservation-template").html();
+  // compile template
+  var template = Handlebars.compile(source);
+  // pass data to template to be evaluated within handlebars
+  // as the template is created
+  var reservationTemplate = template(reservations);
+  // append created templated
+  reservationList.append(reservationTemplate);
 });
 
 
